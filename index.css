@@ -1,0 +1,352 @@
+/* CSS Based on reference image */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-red: #2B579A;
+    /* Professional blue replacing dark red */
+    --link-color: #333333;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Open Sans', Arial, sans-serif;
+    --max-width: 1000px;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Smooth scrolling for anchor links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-red);
+}
+
+/* Header & Navigation */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 100;
+}
+
+.header-left .logo-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.header-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    color: var(--text-color);
+}
+
+.nav-link.active {
+    background-color: #183056; /* Darker shade of #2B579A */
+    color: #fff;
+    border-radius: 2px;
+}
+
+.nav-link.active:hover {
+    color: #fff;
+}
+
+/* Main Container */
+.container {
+    max-width: calc(var(--max-width) + 100px);
+    /* Slightly increased max width for reduced margins */
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    /* Reduced top padding */
+}
+
+/* Distinctive Title and Red Line */
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.divider {
+    height: 12px;
+    background-color: var(--accent-red);
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+/* Content Sections */
+.content-section {
+    padding-top: 2rem;
+    /* Offset for sticky header anchoring */
+    margin-bottom: 5rem;
+}
+
+#homepage {
+    min-height: 85vh;
+    /* Ensure Research section is pushed down out of initial view */
+}
+
+#teaching {
+    padding-bottom: 35vh;
+    /* Gives enough bottom space to allow scrolling until Teaching is fully active */
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #183056; /* Matches dark blue active header link */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Homepage Grid */
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+.bio-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.separator-stars {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    color: #555;
+    margin: 2rem 0;
+}
+
+/* Lists and Items */
+.research-category {
+    margin-bottom: 3rem;
+}
+
+.research-category h3,
+.experience-col h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--accent-red);
+}
+
+.paper-item {
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #eee;
+    padding-left: 1rem;
+}
+
+.paper-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.paper-meta {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.paper-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0.3rem;
+}
+
+/* Experience Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.clean-list {
+    list-style: none;
+}
+
+.clean-list li {
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.clean-list li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        gap: 1rem;
+        position: static;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .bio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-content.active {
+        flex-direction: column;
+    }
+}
+
+/* Accordion Papers & Profile Image */
+.bio-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.paper-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 1rem;
+}
+
+.paper-header:hover .paper-title {
+    color: var(--accent-red);
+}
+
+.paper-content {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dotted #ccc;
+    gap: 1.5rem;
+}
+
+.paper-content.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.paper-abstract {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #444;
+    text-align: justify;
+}
+
+.paper-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* centers the image vertically relative to the abstract */
+}
+
+.paper-images img {
+    width: 100%;
+    height: 100%;
+    max-height: 250px; /* Caps the height to effectively match the abstract's visual paragraph */
+    object-fit: contain; /* displays the full image without cropping or distorting */
+    border-radius: 4px;
+}
+
+.dropdown-icon {
+    font-size: 0.9rem;
+    color: var(--accent-red);
+    transition: transform 0.3s ease;
+    margin-top: 0.3rem;
+}
+
+.paper-header.active .dropdown-icon {
+    transform: rotate(180deg);
+}
