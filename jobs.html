@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Job Tracker</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="jobs.css">
+</head>
+<body>
+    <header>
+        <h1>Academic Job Market Tracker</h1>
+        <nav>
+            <a href="index.html">Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search institution or title...">
+            <select id="source-filter">
+                <option value="all">All Sources</option>
+                <option value="EJM">EJM / EJME</option>
+                <option value="LinkedIn">LinkedIn</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table id="jobs-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('score')" title="Sort by score">Score ↕</th>
+                        <th onclick="sortTable('institution')" title="Sort by institution">Institution ↕</th>
+                        <th onclick="sortTable('title')" title="Sort by title">Position ↕</th>
+                        <th onclick="sortTable('country')" title="Sort by country">Country ↕</th>
+                        <th onclick="sortTable('deadline')" title="Sort by deadline">Deadline ↕</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="jobs-body">
+                    <!-- Jobs will be injected here by jobs.js -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="jobs.js"></script>
+</body>
+</html>
