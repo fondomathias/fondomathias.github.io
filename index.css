@@ -54,6 +54,18 @@ a:hover {
     z-index: 100;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
 .header-left .logo-name {
     font-family: var(--font-heading);
     font-size: 1.4rem;
@@ -279,6 +291,41 @@ a:hover {
     border-radius: 4px;
     display: block;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-contact-block {
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 0.85rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #5f6368;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-red);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.photo-contact {
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 .paper-header {
