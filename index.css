@@ -380,14 +380,10 @@ a:hover {
 }
 
 .paper-abstract {
-    flex: 0 0 64%;
+    flex: 1;
     font-size: 0.95rem;
     color: #444;
     text-align: justify;
-}
-
-.paper-abstract:only-child {
-    flex: 1 1 100%;
 }
 
 .paper-images {
