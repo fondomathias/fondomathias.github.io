@@ -4,7 +4,7 @@
     --text-color: #333333;
     --accent-red: #2B579A;
     /* Professional blue replacing dark red */
-    --link-color: #333333;
+    --link-color: #2B579A;
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Open Sans', Arial, sans-serif;
     --max-width: 1000px;
@@ -31,18 +31,21 @@ body {
 }
 
 a {
-    color: var(--accent-red);
+    color: #2B579A;
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
 
 a:hover {
-    color: var(--accent-red);
-    opacity: 0.8;
+    color: #2B579A;
+    opacity: 0.75;
 }
 
+.bio-text a,
 .paper-meta a,
+.paper-desc a,
 .photo-contact a {
+    color: #2B579A !important;
     text-decoration: underline;
 }
 
@@ -300,45 +303,42 @@ a:hover {
 }
 
 .profile-contact-block {
-    margin-top: 1.1rem;
+    margin-top: 1.25rem;
     text-align: center;
 }
 
 .photo-contact {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-color);
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.75rem;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .social-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: var(--accent-red);
-    text-decoration: none;
-    padding: 0.25rem 0.6rem;
-    border: 1px solid rgba(43, 87, 154, 0.25);
-    border-radius: 4px;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #2B579A;
+    color: #2B579A !important;
+    background-color: transparent;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .social-link:hover {
-    background-color: rgba(43, 87, 154, 0.08);
-    border-color: var(--accent-red);
+    background-color: #2B579A;
+    color: #ffffff !important;
     opacity: 1;
-}
-
-.social-sep {
-    display: none;
+    transform: translateY(-2px);
 }
 
 .paper-header {
